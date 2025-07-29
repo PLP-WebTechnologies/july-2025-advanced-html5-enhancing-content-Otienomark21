@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enhanced HTML5 Page with Forms, Media, Lists & Tables</title>
+</head>
+<body>
+    <header>
+        <h1>Mastering HTML5: Content & Forms</h1>
+        <nav aria-label="Main Page Navigation">
+            <ul>
+                <li><a href="#content-showcase">Content Showcase</a></li>
+                <li><a href="#interactive-form">Interactive Registration Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content-showcase">
+            <h2>Diverse Content Presentation</h2>
+
+            <h3>Our Featured Products (Unordered List)</h3>
+            <ul>
+                <li>Product A: High-performance widget</li>
+                <li>Product B: Eco-friendly solution kit</li>
+                <li>Product C: Smart home automation device</li>
+                <li>Product D: Ergonomic office chair</li>
+            </ul>
+
+            <h3>Development Milestones (Ordered List)</h3>
+            <ol>
+                <li>Initial Concept & Research (Q1 2024)</li>
+                <li>Prototype Development & Testing (Q2 2024)</li>
+                <li>Alpha Launch & Feedback Collection (Q3 2024)</li>
+                <li>Beta Release & User Trials (Q4 2024)</li>
+                <li>Official Product Launch (Q1 2025)</li>
+            </ol>
+
+            <h3>Annual Performance Data (Table)</h3>
+            <table>
+                <caption>Company Performance Summary by Quarter</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Quarter</th>
+                        <th scope="col">Revenue ($)</th>
+                        <th scope="col">Growth (%)</th>
+                        <th scope="col">New Customers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Q1 2024</td>
+                        <td>1,200,000</td>
+                        <td>5.2</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Q2 2024</td>
+                        <td>1,350,000</td>
+                        <td>12.5</td>
+                        <td>410</td>
+                    </tr>
+                    <tr>
+                        <td>Q3 2024</td>
+                        <td>1,480,000</td>
+                        <td>9.6</td>
+                        <td>390</td>
+                    </tr>
+                    <tr>
+                        <td>Q4 2024</td>
+                        <td>1,650,000</td>
+                        <td>11.5</td>
+                        <td>480</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Data updated as of December 31, 2024</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3>Media Showcase</h3>
+            <figure>
+                <img src="https://via.placeholder.com/600x300/F0F0F0/888888?text=Product+Image" alt="Product image not available" width="600" height="300">
+                <figcaption>Our latest product in action.</figcaption>
+            </figure>
+
+            <h4>Company Anthem (Audio)</h4>
+            <audio controls>
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/mpeg">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h4>Introductory Video (Video)</h4>
+            <video controls width="640" height="360" poster="https://via.placeholder.com/640x360/D0D0D0/555555?text=Video+Thumbnail">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-ogv-file.ogv" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+        </section>
+
+        <section id="interactive-form">
+            <h2>User Registration Form</h2>
+            <p>Please fill out the form below to register. All fields marked with an asterisk (<abbr title="Required Field">*</abbr>) are required.</p>
+
+            <form action="/submit-registration" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullName">Full Name <abbr title="Required Field">*</abbr>:</label><br>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="John" autocomplete="name" required
+                               minlength="3" maxlength="100">
+                    </p>
+
+                    <p>
+                        <label for="userEmail">Email Address <abbr title="Required Field">*</abbr>:</label><br>
+                        <input type="email" id="userEmail" name="userEmail"
+                               placeholder="john@example.com" autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="userPassword">Password <abbr title="Required Field">*</abbr>:</label><br>
+                        <input type="password" id="userPassword" name="userPassword"
+                               placeholder="Minimum 8 characters" autocomplete="new-password" required
+                               minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.">
+                    </p>
+
+                    <p>
+                        <label for="confirmPassword">Confirm Password <abbr title="Required Field">*</abbr>:</label><br>
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                               placeholder="Re-enter your password" autocomplete="new-password" required
+                               minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Must match the password entered above and follow the same complexity rules.">
+                    </p>
+
+                    <p>
+                        <label for="phoneNumber">Phone Number:</label><br>
+                        <input type="tel" id="phoneNumber" name="phoneNumber"
+                               placeholder="e.g., +1-555-123-4567" autocomplete="tel"
+                               pattern="^\+?[0-9]{1,3}[-. ]?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$"
+                               title="Phone number must be in a standard format (e.g., +1-555-123-4567)">
+                    </p>
+
+                    <p>
+                        <label for="websiteUrl">Personal Website:</label><br>
+                        <input type="url" id="websiteUrl" name="websiteUrl"
+                               placeholder="https://www.example.com" autocomplete="url">
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Details</legend>
+
+                    <p>
+                        <label for="birthDate">Date of Birth <abbr title="Required Field">*</abbr>:</label><br>
+                        <input type="date" id="birthDate" name="birthDate" required
+                               min="1900-01-01" max="2007-12-31">
+                    </p>
+
+                    <p>
+                        <label for="favNumber">Favorite Number (1-100):</label><br>
+                        <input type="number" id="favNumber" name="favNumber"
+                               min="1" max="100" step="1" placeholder="e.g., 42">
+                    </p>
+
+                    <p>
+                        <label for="satisfactionRange">Satisfaction Level (1-100):</label><br>
+                        <input type="range" id="satisfactionRange" name="satisfactionRange"
+                               min="1" max="100" value="50">
+                        <output for="satisfactionRange" oninput="this.value=satisfactionRange.value"></output>
+                        </p>
+
+                    <p>
+                        <label for="favColor">Favorite Color:</label><br>
+                        <input type="color" id="favColor" name="favColor" value="#4287f5">
+                    </p>
+
+                    <p>
+                        <label for="userRole">Select Your Role <abbr title="Required Field">*</abbr>:</label><br>
+                        <select id="userRole" name="userRole" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Project Manager</option>
+                            <option value="qa">QA Engineer</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="bio">Tell us about yourself:</label><br>
+                        <textarea id="bio" name="bio" rows="5" cols="50"
+                                  placeholder="A brief description of your background or interests..."
+                                  minlength="10" maxlength="500"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="profilePicture">Upload Profile Picture:</label><br>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/png, image/jpeg">
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Communication Preferences</legend>
+
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </p>
+
+                    <p>Preferred Contact Method:</p>
+                    <p>
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                        <label for="contactEmail">Email</label><br>
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone">Phone</label><br>
+                        <input type="radio" id="contactMail" name="contactMethod" value="mail">
+                        <label for="contactMail">Postal Mail</label>
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>System Information</legend>
+                    <p>
+                        <label for="registrationDate">Registration Date:</label><br>
+                        <input type="text" id="registrationDate" name="registrationDate"
+                               value="2025-07-29" readonly>
+                        </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Register Now</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Showcase. All rights reserved.</p>
+        <p>This page demonstrates advanced HTML5 features for educational purposes.</p>
+    </footer>
+</body>
+</html>
